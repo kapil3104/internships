@@ -23,14 +23,15 @@ class intern {
         while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
 	        $orgname=$row['org_name'];
             $content=$row['content'];
-			$html_part='<div class="jumbotron">
-        <h1>'. $orgname .'</h1>
-        <p>'. $content .'</p>
+            $item_id=$row['id_no'];
+            ?><div class="jumbotron">
+        <h1><?php echo $orgname ?></h1>
+        <p><?php echo $content ?></p>
         <p id="details_btn">
-          <a class="btn btn-lg btn-primary" href="action.php" role="button">View Details &raquo;</a>
+          <a class="btn btn-lg btn-primary" href="index.php?id=<?php echo $item_id; ?>" role="button">View Details &raquo;</a>
         </p>
-      </div>';
-      echo $html_part;
+      </div>
+      <?php
   		}
 	}
 	function add_intern(){

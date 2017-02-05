@@ -2,16 +2,31 @@
 <?php
 session_start();
 if(isset($_GET['add_intern'])){
-  if($_GET['add_intern']=="false"){
-    unset($_SESSION['add_inter']);
+  if($_GET['add_intern']=="active"){
+    $_SESSION['add_inter']=$_GET['add_intern'];
   }
   else {
-    $_SESSION['add_intern']=$_GET['add_intern'];
+
   }
 }
+else if(isset($_GET['work'])){
+  if($_GET['work']=="active"){
+    $_SESSION['work']=$_GET['work'];
+  }
+  else{
+
+  }
+}
+else if(isset($_GET['id'])){
+  $_SESSION['id']=$_GET['id'];
+}
+else{
+  $_SESSION['work']="active";
+}
+
 if(isset($_GET['userid'])){
-  if($_GET['userid']=="false"){
-    unset($_SESSION['userid']);
+  if($_GET['userid']=="active"){
+    $_SESSION['userid']=$_GET['userid'];
   }
   else {
 
@@ -105,11 +120,11 @@ else if(isset($_POST['login'])) {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php?add_intern=false"><h1 id="logo_title">SEEKERS</h1></a>
+            <a class="navbar-brand" href="index.php?work=active"><h1 id="logo_title">SEEKERS</h1></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li ><a href="index.php?add_intern=false">Home</a></li>
+              <li ><a href="index.php?work=active">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
@@ -117,7 +132,6 @@ else if(isset($_POST['login'])) {
             <?php
                           if(isset($_SESSION['userid'])){
 
-                            echo $_SESSION['userid'];
                         ?>
               <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account Panel <span class="caret"></span></a>
@@ -204,17 +218,23 @@ else if(isset($_POST['login'])) {
 
       <?php
         include ("intern.php");
+        include ("action.php");
+        $action = new action();
         $intern = new intern();
         if(isset($_SESSION['add_intern'])){
           if($_SESSION['add_intern']=="active"){
             $intern->add_intern();
           }
-          else {
+          else  {
             $intern->work();
           }
         }
-        else {
+        else if(isset($_SESSION['work'])=="active") {
           $intern->work();
+        }
+        else if(isset($_SESSION['id'])){
+          echo "kapil";
+          $action->doJob($_GET['id']);
         }
       ?>
 
