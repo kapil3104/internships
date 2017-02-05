@@ -1,21 +1,15 @@
 
 <?php
 session_start();
-if(isset($_GET['add_intern'])){
-  if($_GET['add_intern']=="active"){
+if(isset($_GET['add_intern']) && $_GET['add_intern']=="active"){
+
     $_SESSION['add_inter']=$_GET['add_intern'];
-  }
-  else {
-
-  }
+  
 }
-else if(isset($_GET['work'])){
-  if($_GET['work']=="active"){
+else if(isset($_GET['work']) && $_GET['work']=="active"){
+  
     $_SESSION['work']=$_GET['work'];
-  }
-  else{
 
-  }
 }
 else if(isset($_GET['id'])){
   $_SESSION['id']=$_GET['id'];
@@ -221,15 +215,12 @@ else if(isset($_POST['login'])) {
         include ("action.php");
         $action = new action();
         $intern = new intern();
-        if(isset($_SESSION['add_intern'])){
-          if($_SESSION['add_intern']=="active"){
+        if(isset($_SESSION['add_intern']) && $_SESSION['add_intern']=="active"){
+        
             $intern->add_intern();
-          }
-          else  {
-            $intern->work();
-          }
+          
         }
-        else if(isset($_SESSION['work'])=="active") {
+        else if(isset($_SESSION['work']) && $_SESSION['work']=="active") {
           $intern->work();
         }
         else if(isset($_SESSION['id'])){

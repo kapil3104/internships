@@ -28,7 +28,7 @@ class intern {
         <h1><?php echo $orgname ?></h1>
         <p><?php echo $content ?></p>
         <p id="details_btn">
-          <a class="btn btn-lg btn-primary" href="index.php?id=<?php echo $item_id; ?>" role="button">View Details &raquo;</a>
+          <a class="btn btn-lg btn-primary" onclick="<?php unset($_SESSION['work']); ?>" href="index.php?id=<?php echo $item_id; ?>" role="button">View Details &raquo;</a>
         </p>
       </div>
       <?php
