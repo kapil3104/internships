@@ -1,0 +1,82 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.modal-body label {display: block; margin-bottom:5px;}
+.modal-body input[type="text"], .modal-body input[type="email"], .modal-body input[type="password"] {display: block; width:90%; padding: 10px; border:1px solid #DDD; color:#666;}
+
+.btn-lg {
+    padding: 12px 24px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+h1#logo_title {
+  margin-top:-4px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 25px;
+    padding-bottom: 16px;
+    font-size: larger;
+}
+
+.modal-dialog {
+          width: 350px; /* New width for default modal */
+        }
+        .modal-sm {
+          width: 350px; /* New width for small modal */
+        }
+
+.modal-footer {
+  text-align: left;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 10;
+  border-bottom-left-radius: 10;
+}
+         
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+body {
+    padding-top:50px;
+}
+fieldset {
+    border: thin solid #ccc; 
+    border-radius: 4px;
+    padding: 20px;
+    padding-left: 40px;
+    background: #fbfbfb;
+}
+legend {
+   color: #678;
+}
+.form-control {
+    width: 95%;
+}
+label small {
+    color: #678 !important;
+}
+span.req {
+    color:maroon;
+    font-size: 112%;
+}
+
+input#content.form-control {
+  width:100px;
+}
