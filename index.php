@@ -3,8 +3,7 @@
 session_start();
 if(isset($_GET['add_intern'])){
   if($_GET['add_intern']=="false"){
-    session_destroy();
-    session_start();
+    unset($_SESSION['add_inter']);
   }
   else {
     $_SESSION['add_intern']=$_GET['add_intern'];
@@ -94,7 +93,7 @@ else if(isset($_POST['login'])) {
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body style="padding-top: 0px;">
     <div class="container-fluid">
       <!-- Static navbar -->
       <nav class="navbar navbar-default">
@@ -106,7 +105,7 @@ else if(isset($_POST['login'])) {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><h1 id="logo_title">SEEKERS</h1></a>
+            <a class="navbar-brand" href="index.php?add_intern=false"><h1 id="logo_title">SEEKERS</h1></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

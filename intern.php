@@ -26,8 +26,8 @@ class intern {
 			$html_part='<div class="jumbotron">
         <h1>'. $orgname .'</h1>
         <p>'. $content .'</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View Details &raquo;</a>
+        <p id="details_btn">
+          <a class="btn btn-lg btn-primary" href="action.php" role="button">View Details &raquo;</a>
         </p>
       </div>';
       echo $html_part;

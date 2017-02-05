@@ -1,6 +1,6 @@
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
 
 .navbar {
@@ -52,10 +52,6 @@ h1#logo_title {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-body {
-    padding-top:50px;
-}
 fieldset {
     border: thin solid #ccc; 
     border-radius: 4px;
@@ -80,3 +76,7 @@ span.req {
 input#content.form-control {
   width:100px;
 }
+
+#details_btn {
+  text-align: center;
+  }
