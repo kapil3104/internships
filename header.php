@@ -1,8 +1,31 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">.
+    <title>SEEKERS for internship</title>
 
-      session_start();
-      ?>
-<nav class="navbar navbar-default">
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/navbar.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="dist/js/ie-emulation-modes-warning.js"></script>
+  </head>
+  <body style="padding-top: 0px;">
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,11 +34,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><h1 id="logo_title">SEEKERS</h1></a>
+            <a class="navbar-brand" href="welcome.php"><h1 id="logo_title">SEEKERS</h1></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li ><a href="index.php?work=true">Home</a></li>
+              <li ><a href="welcome.php">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
@@ -39,16 +62,9 @@
               <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log In</button>
 
                 <!-- Modal -->
-                <?php include ("login.php"); ?>
+                <?php include ("login.php");
+                } ?>
                 </li>
-                <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Register</button>
-
-                <!-- Modal -->
-                <?php include ("register.php"); ?>
-                </li>
-                <?php
-                  }
-              ?>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
