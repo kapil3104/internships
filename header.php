@@ -63,6 +63,12 @@
 
                 <!-- Modal -->
                 <?php include ("login.php");
+                 ?>
+                </li>
+                <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Register</button>
+
+                <!-- Modal -->
+                <?php include ("register.php");
                 } ?>
                 </li>
             </ul>
