@@ -11,8 +11,10 @@ if(isset($_GET['add_intern'])){
   }          
 }
 else if(isset($_GET['id'])){
-  $_SESSION['id']=$_GET['id'];
-  $action->doJob($_GET['id']);
+  // $_SESSION['id']=$_GET['id'];
+  // $action->doJob($_GET['id']);
+  $idd=$_GET['id'];
+  header("location:get_details.php?id=".$idd);
 }
 else {
   $db = mysqli_connect('localhost:3306','root','','internship');
